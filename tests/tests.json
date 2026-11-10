@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Start a game and control a falling piece",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "start game",
+      "keyboard movement",
+      "piece rotation",
+      "score display"
+    ],
+    "description": "Verifies the player can start a round and interact with the falling blocks.",
+    "steps": [
+      "Open Block Drop",
+      "Click START GAME",
+      "Press ArrowLeft and ArrowUp",
+      "Press Space to hard drop a piece"
+    ],
+    "expected": "The overlay disappears, the active piece responds to controls, and the score remains visible."
+  },
+  {
+    "name": "Pause and resume a game",
+    "viewport": "desktop",
+    "covers": [
+      "pause and resume",
+      "game state controls"
+    ],
+    "description": "Checks the pause control can pause and resume active play without resetting the score.",
+    "steps": [
+      "Start a new game",
+      "Click PAUSE",
+      "Click RESUME"
+    ],
+    "expected": "The pause action stops piece movement and resume continues the current game."
+  },
+  {
+    "name": "Use touch controls on mobile",
+    "viewport": "mobile",
+    "covers": [
+      "responsive mobile layout",
+      "touch movement",
+      "touch rotation",
+      "touch hard drop"
+    ],
+    "description": "Checks that compact-screen controls let the player move, rotate, and drop pieces.",
+    "steps": [
+      "Open Block Drop in a mobile viewport",
+      "Tap START GAME",
+      "Tap the left arrow, ROTATE, and DROP controls"
+    ],
+    "expected": "Touch controls are visible and each action updates the active game."
+  },
+  {
+    "name": "Restart a running game",
+    "viewport": "desktop",
+    "covers": [
+      "restart game",
+      "score reset",
+      "lines and level reset"
+    ],
+    "description": "Verifies restarting creates a fresh round and resets game statistics.",
+    "steps": [
+      "Start a game",
+      "Move or drop pieces to change the board",
+      "Click RESTART"
+    ],
+    "expected": "A new active round begins with score zero, zero lines, level one, and a cleared board."
+  },
+  {
+    "name": "Navigate the game guide and privacy information",
+    "viewport": "mobile",
+    "covers": [
+      "site navigation",
+      "original game instructions",
+      "privacy policy visibility",
+      "contact information notice"
+    ],
+    "description": "Verifies visitors can navigate to useful game instructions and find privacy and contact sections.",
+    "steps": [
+      "Open Block Drop on a mobile viewport",
+      "Tap How to play in the navigation",
+      "Tap Privacy",
+      "Tap Contact"
+    ],
+    "expected": "The page navigates to the matching sections and displays the guide, privacy policy, and contact section."
+  }
+]

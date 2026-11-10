@@ -1,14 +1,11 @@
 /**
  * Google AdSense setup for Block Drop — Tetris.
  *
- * After your AdSense account and site are approved, paste your publisher ID
- * below (format: ca-pub- followed by 16 digits). Until then, AdSense stays
- * disabled and the game runs normally.
- *
- * Never put passwords or private account credentials here. The publisher ID
- * is a public identifier intended to appear in the page source.
+ * The AdSense loader is enabled with the public publisher ID so Google can
+ * verify the site. Ad serving still depends on site approval and AdSense
+ * settings. No private account credentials are stored here.
  */
-const ADSENSE_PUBLISHER_ID = '';
+const ADSENSE_PUBLISHER_ID = 'ca-pub-6465659411947721';
 
 const PUBLISHER_ID_PATTERN = /^ca-pub-\d{16}$/;
 
